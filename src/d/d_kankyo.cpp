@@ -1576,8 +1576,7 @@ void dScnKy_env_light_c::setDaytime() {
                         }
                         else {
                             f32 prev = daytime;
-
-                            daytime += time_change_rate;
+                       daytime += time_change_rate;
 
                             if (time_change_rate == 1.0f &&
                                 (std::fmod(daytime - 90.0f + 360.0f, 360.0f) < std::fmod(prev - 90.0f + 360.0f, 360.0f) ||
@@ -1607,7 +1606,7 @@ void dScnKy_env_light_c::setDaytime() {
                                 mDate++;
                                 dKankyo_DayProc();
                             }
-                        }    
+                        }
                     } else {
                         #if DEBUG
                         if (fapGmHIO_get2Ddraw()) {
